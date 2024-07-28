@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackson Mu</title>
+    <link rel="stylesheet" href="./index_files/styles.css">
+    <link href="./index_files/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&amp;family=Sacramento&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            color: #000000;
+            justify-content: center;
+            text-align: center;
+            font-family: "Merriweather", serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding: 90px 20px;
+        }
+
+        .profile-container {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 290px;
+            height: 290px;
+            text-align: center;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        .content {
+            max-width: 9000px;
+            padding: 20px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .intro {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #21438d;
+            font-size: 3rem;
+            text-align: center;
+            margin: 50px auto 0 auto;
+        }
+
+        h2 {
+            color: #66bfbf;
+            font-family: "Montserrat", sans-serif;
+            font-size: 2rem;
+            font-weight: normal;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        #title {
+            text-align: center;
+            text-align: center;
+        }
+
+        h3 {
+            color: #11999e;
+            font-family: "Montserrat", sans-serif;
+            text-align: center;
+        }
+
+        p {
+            line-height: 2;
+            text-align: center;
+        }
+
+        hr {
+            border: dotted #eaf6f6 6px;
+            text-align: center;
+            border-bottom: none;
+            width: 4%;
+            margin: 50px auto;
+        }
+
+        a {
+            color: #11999e;
+            font-family: "Montserrat", sans-serif;
+            text-align: center;
+            margin: 10px 20px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #eaf6f6;
+            text-align: center;
+        }
+
+        .top-container {
+            background-color: #e4f9f5;
+            text-align: center;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .middle-container {
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .bottom-container {
+            background-color: #66bfbf;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .skill-row {
+            width: 90%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .pro {
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        .intro {
+            width: 90%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .contact-message {
+            width: 90%;
+            margin: 20px auto;
+            
+            text-align: center;
+        }
+
+        .copyright {
+            color: #eaf6f6;
+            font-size: 0.75rem;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .top-cloud, .bottom-cloud, .mountain {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .btn {
+            background: #0b3e9c;
+            background-image: -webkit-linear-gradient(top, #095ad2, #115fa0);
+            background-image: -moz-linear-gradient(top, #143aaa, #11358f);
+            background-image: -ms-linear-gradient(top, #0b3e9c, #122889);
+            background-image: -o-linear-gradient(top, #0b3e9c, #0b3e9c);
+            background-image: linear-gradient(to bottom, #0b3e9c, #0b3e9c);
+            border-radius: 8px;
+            font-family: "Montserrat", sans-serif;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #0b3e9c;
+            background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+            background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+            background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+            background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+            background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .parent {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 2rem;
+            width: 90%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .typing, .bread-img {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .typing img, .bread-img img {
+            border-radius: 50%;
+            width: 100%;
+            text-align: center;
+            max-width: 300px;
+            height: auto;
+        }
+
+        @media (min-width: 768px) {
+            .profile {
+                flex-direction: row;
+                text-align: center;
+                padding: 90px;
+                text-align: center;
+            }
+            .profile-container {
+                flex-direction: row;
+                text-align: center;
+            }
+            .profile-img {
+                width: 200px;
+                height: 200px;
+                margin-right: 20px;
+                text-align: center;
+                margin-bottom: 0;
+            }
+            .content {
+                padding: 0;
+                text-align: center;
+                margin: 0 auto;
+            }
+            h1 {
+                font-size: 5rem;
+                text-align: center;
+            }
+            h2 {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+            .skill-row {
+                width: 50%;
+                text-align: center;
+            }
+            .intro {
+                width: 50%;
+                text-align: center;
+            }
+            .contact-message {
+                width: 40%;
+                text-align: center;
+            }
+            .parent {
+                grid-template-columns: 1fr 1fr;
+                text-align: center;
+                width: 80%;
+                margin: 50px auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top-container">
+        <img class="top-cloud" src="cloud.png" alt="cloud">
+        <div class="title-text">
+            <h1>I'm Jackson.</h1>
+            <h3>A <span class="pro">Website Developer & Data Scientist</span>!</h3>
+        </div>
+        <img class="bottom-cloud" src="cloud.png" alt="cloud">
+        <img class="mountain" src="mountain.png" alt="mountain-img">
+    </div>
+    <div class="middle-container">
+        
+        <div class="profile">
+          
+            <div class="profile-container">
+                <img src="Jackson-profile.jpg" alt="Jackson-profile-img" class="profile-img">
+                <div class="content">
+                    <h2 id="title">Hello!</h2>
+                    <p class="intro">I'm a Data Scientist, Sales Engineer, Website developer, and the brain behind the FIFA 2022 World Cup Data Analytics App. Oh, and a real human too! I live for football and any athletic tournament. I ❤️ long walks too—because every data scientist needs to step away from the screen sometimes!</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="skills">
+            <h2>My Skills</h2>
+            <div class="parent">
+                
+                <div class="typing">
+                    
+                    <img src="cat-typing.gif" alt="typing cat">
+                </div>
+                <div class="coding">
+                    <h3 id="title">Design & Development</h3>
+                    
+                    <p>I started coding at 20, dreaming of using tech to tackle real-life challenges in Rwanda. I'm not quite there yet, but I've learned a lot while building mobile and web apps. Still on the journey, and always aiming to make a difference.</p>
+                </div>
+                
+                <div class="bread-img">
+                    <img src="bread.jpg" alt="bread-img">
+                </div>
+                <div class="hot-wings">
+                    <h3 id="title">Bread Challenge</h3>
+                    <p>My top skill? Eating bread! I'm the bread-eating king! Any time of day, I'm ready for some bread. Whole grain and sprouted grain are my favorite. Just call me the Bread Champion again!</p>
+                </div>
+            </div>
+            <hr>
+            <div class="contact-me">
+                <h2>Get In Touch</h2>
+                <h3>Do you love football & eating bread as much as I do?</h3>
+                <p class="contact-message">Let's chat about our favorite matches! We can even code together!</p>
+                <a href="mailto:Jackson@example.com" class="btn">Contact Me</a>
+            </div>
+        </div>
+    </div>
+        <div class="bottom-container">
+            <a class="footer-link" href="https://github.com/Jackson-Mu">Github</a>
+            <a class="footer-link" href="https://huggingface.co/spaces/JacksonMu/FIFA-World-Cup-2022-Data-Analysis">Hugging Face Personal Site</a>
+            <a class="footer-link" href="mailto:mukesjackson02@gmail.com">Email</a>
+            <p class="copyright">© 2024,  Jackson Mu.</p>
+        </div>
+
+</body>
+</html>
